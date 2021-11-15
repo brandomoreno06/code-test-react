@@ -1,0 +1,41 @@
+.loading {
+  color: #1976d2;
+  display: block;
+  height: 1.5em;
+  margin: auto;
+  position: relative;
+  width: 1.5em;
+}
+
+.loading__part {
+    border: 0.1875rem solid transparent;
+    border-color: currentColor transparent transparent transparent;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    animation: spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+
+.loading__part:first-child {
+  animation-delay: -0.45s;
+}
+
+.loading__part:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.loading__part:last-child {
+  animation-delay: -0.15s;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
